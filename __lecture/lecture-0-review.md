@@ -44,6 +44,26 @@ What notation do we use to run JS snippets inside of an `.ejs` file?
 
 ```js
 // Example
+const callbackFunc = (req, res) =>{
+  res.status(200)
+  res.send()
+  res.json()
+}
+
+.get('/users/', callbackFunc);
+```
+
+- What is the minimum amount of code to set up an express server?
+
+```js
+// Example
+const express = require('express');
+
+const app - express();
+
+app.get('/', (req, res) =>{
+  res.statues(200).json({status: 200, data: (message:'ok')}}
+})
 ```
 
 ---
@@ -52,10 +72,12 @@ What notation do we use to run JS snippets inside of an `.ejs` file?
 
 ```js
 // ...
-app.get('/contact-info', (req, res) => {
-  const name =   // ...
-  const age =    // ...
+app.get("/contact-info", (req, res) => {
+  const name = req.query.name;
+  const age = req.query.age;
+  //OR (better option)
+  //const { name, age } = req.query;
 
   res.json({ status: 200 });
-})
+});
 ```
