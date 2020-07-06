@@ -23,6 +23,23 @@ app.get("/top50", (req, res) => {
     top50: top50,
   });
 });
+app.get("/top50/popular-artist", (req, res) => {
+  res.status(200);
+  res.render("pages/popular-artist", {
+    title: "Most Popular Artist",
+    path: req.originalUrl,
+    top50: top50,
+  });
+});
+app.get("/top50/song/:id", (req, res) => {
+  res.status(200);
+  res.render("pages/song-page", {
+    title: `Song #${req.params.id}`,
+    path: req.originalUrl,
+    top50: top50,
+    id: req.params.id - 1,
+  });
+});
 
 // handle 404s
 app.get("*", (req, res) => {
