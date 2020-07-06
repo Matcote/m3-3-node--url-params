@@ -1,1 +1,33 @@
 /* song css */
+li {
+  border-bottom: 1px solid black;
+  padding: 10px 0;
+  margin: 0 25px;
+  display: flex;
+  justify-content: space-between;
+}
+ol {
+  margin-top: 20px;
+}
+.rank {
+  font-size: 40px;
+  font-weight: bold;
+}
+.streams {
+  font-size: small;
+}
+.title {
+  font-weight: bold;
+  font-size: large;
+}
+.artist {
+  text-align: left;
+}
+.releaseDate {
+  display: flex;
+  align-items: flex-end;
+  align-self: flex-end;
+}
+.middle {
+  width: 70vw;
+}
