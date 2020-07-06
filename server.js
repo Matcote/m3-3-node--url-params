@@ -32,13 +32,21 @@ app.get("/top50/popular-artist", (req, res) => {
   });
 });
 app.get("/top50/song/:id", (req, res) => {
-  res.status(200);
-  res.render("pages/song-page", {
-    title: `Song #${req.params.id}`,
-    path: req.originalUrl,
-    top50: top50,
-    id: req.params.id - 1,
-  });
+  if (req.params.id > 0 && req.params.id < 51) {
+    res.status(200);
+    res.render("pages/song-page", {
+      title: `Song #${req.params.id}`,
+      path: req.originalUrl,
+      top50: top50,
+      id: req.params.id - 1,
+    });
+  } else {
+    res.status(404);
+    res.render("pages/fourOhFour", {
+      title: "I got nothing",
+      path: req.originalUrl,
+    });
+  }
 });
 
 // handle 404s
