@@ -1,0 +1,27 @@
+.desc {
+  padding-top: 20px;
+}
+.genre {
+  align-self: flex-end;
+}
+.smallCover {
+  height: 150px;
+}
+.square2 {
+  width: 500px;
+  height: 650px;
+  border-radius: 6px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  align-self: center;
+  margin-top: 150px;
+  text-align: center;
+  padding: 0 25px;
+}
+.bookImg {
+  border: 1px solid black;
+  margin-top: 15px;
+}
+.bookAuthor {
+  font-weight: bolder;
+  font-size: x-large;
+}

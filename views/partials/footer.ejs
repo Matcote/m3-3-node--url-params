@@ -1,5 +1,7 @@
 <footer>
-
+    <% if(id >= 0 && id <= 50){ %>
+    <a href=<%-`../song/${id}` %>>Previous</a>     <a href=<%-`../song/${id+2}` %>>Next</a>
+<% }; %>
 </footer>
 </body>
 </html>

@@ -4,4 +4,4 @@
     <p class="songArtist"><%-top50[id].artist%></p>
     <p class="songStreams"><%-top50[id].streams%></p>
 </div>
-<%- include('../partials/footer')%>
+<%- include('../partials/footer', {page: id})%>

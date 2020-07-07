@@ -1,0 +1,9 @@
+<ol>
+    <%books.forEach(element => {  %>
+    <li>
+        <div><img src=<%-element.imgUrl%>></div>
+        <div class='middle'><p class='title'><%-element.title%></p><p>by <%-element.author%><p class='desc'><%-element.description%></p></div>
+        <div class='genre'>Genre: <a href=<%-"/books/" + element.type%>><%- element.type%></a></div>
+    </li>
+    <%   });    %>
+</ol>

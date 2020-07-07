@@ -1,0 +1,9 @@
+<ol>
+    <%books.forEach(element => {  if(title === element.type){%>
+    <li>
+        <div><img class='smallCover' src=<%-element.imgUrl%>></div>
+        <div class='middle'><p class='title'><%-element.title%></p><p>by <%-element.author%></div>
+        <div class='genre'>Genre: <a href=<%-"/books/" + element.type%>><%- element.type%></a></div>
+    </li>
+    <%  } });    %>
+</ol>
